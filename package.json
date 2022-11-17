@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/sofisil/TS-API-Project#readme",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "@faker-js/faker": "^7.6.0",
+    "lite-server": "^2.6.1",
+    "parcel": "^2.8.0"
   }
 }
