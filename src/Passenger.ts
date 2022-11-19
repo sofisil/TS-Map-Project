@@ -1,5 +1,4 @@
 import { faker } from '@faker-js/faker';
-
 export class Passenger {
   private readonly name: string;
   private readonly location: {
