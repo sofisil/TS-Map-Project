@@ -9,3 +9,24 @@ html, body {
   border: 1px solid #ccc;
   margin: 2rem auto;
 }
+
+.search {
+  text-align: center;
+  margin: 2rem;
+}
+
+#address {
+  border-radius: 12px;
+  padding: 6px 24px;
+}
+
+#searchButton {
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  padding: 6px 24px;
+}
+
+#searchButton:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}

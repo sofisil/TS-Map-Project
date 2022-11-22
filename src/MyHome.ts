@@ -20,4 +20,8 @@ export class MyHome implements Mappable {
       lng: (parseInt(passenger.getLocation.lng) +0.001 ).toString(),
     };
   }
+
+  markerTitle(address: () => string): string {
+    return `The direction of my home is ${address()}`
+  }
 }

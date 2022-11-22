@@ -1,3 +1,4 @@
+import { Mappable } from "./Mappable";
 export class MapGeoCoder {
   private map: google.maps.Map;
   private geocoder: google.maps.Geocoder;
@@ -8,7 +9,7 @@ export class MapGeoCoder {
     this.map = map;
     this.geocoder = new google.maps.Geocoder;
   }
-  AddMarkerInfo(marker: google.maps.Marker): void {
+  AddMarkerInfo(marker: google.maps.Marker, mappable: Mappable): void {
     marker.addListener('click', () => {
       const latlng = {
         lat: marker.getPosition()!.lat(),
@@ -18,7 +19,7 @@ export class MapGeoCoder {
       (results, status) => {
         if (status == "OK"){
           const infoWindows = new google.maps.InfoWindow({
-            content: results[0].formatted_address,
+            content: mappable.markerTitle( () => results[0].formatted_address)
           });
           infoWindows.open(
             this.map,

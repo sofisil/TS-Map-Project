@@ -26,7 +26,7 @@ export class Map {
         lng: parseInt (mappable.getLocation.lng),
       },
     });
-    this.geoCoder.AddMarkerInfo(marker);
+    this.geoCoder.AddMarkerInfo(marker, mappable);
   }
 };
 

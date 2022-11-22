@@ -22,4 +22,8 @@ export abstract class Person implements Mappable {
       lng: location.lng,
     };
   }
+
+  markerTitle(address: () => string): string {
+    return `The direction of ${this.name} is ${address()}`
+  }
 };
