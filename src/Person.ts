@@ -1,4 +1,5 @@
-export abstract class Person {
+import { Mappable } from './Mappable';
+export abstract class Person implements Mappable {
   protected name: string;
   protected location: {
     lat: string;

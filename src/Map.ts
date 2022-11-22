@@ -1,6 +1,9 @@
-import { Person } from "./Person";
+import { Mappable } from "./Mappable";
+import { MapGeoCoder } from './MapGeoCoder';
 export class Map {
   private googleMap: google.maps.Map;
+  private geoCoder: MapGeoCoder;
+
   constructor (divId: string){
     this.googleMap = new google.maps.Map(
       document.getElementById(divId),
@@ -11,17 +14,19 @@ export class Map {
           lng: 0,
         }
       });
+
+    this.geoCoder = new MapGeoCoder(this.googleMap)
   }
 
-  AddMarker(person: Person){
-    new google.maps.Marker({
+  AddMarker(mappable: Mappable){
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
-        lat: parseInt (person.getLocation.lat),
-        lng: parseInt (person.getLocation.lng)
-
-      }
-    })
+        lat: parseInt (mappable.getLocation.lat),
+        lng: parseInt (mappable.getLocation.lng),
+      },
+    });
+    this.geoCoder.AddMarkerInfo(marker);
   }
 };
 
