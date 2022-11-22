@@ -1,3 +1,4 @@
+import { Person } from "./Person";
 export class Map {
   private googleMap: google.maps.Map;
   constructor (divId: string){
@@ -10,7 +11,17 @@ export class Map {
           lng: 0,
         }
       });
+  }
 
+  AddMarker(person: Person){
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: parseInt (person.getLocation.lat),
+        lng: parseInt (person.getLocation.lng)
+
+      }
+    })
   }
 };
 

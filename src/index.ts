@@ -23,4 +23,13 @@
  */
 
 import { Map } from "./Map"
-  var map = new Map("map");
+import { Driver } from "./Driver";
+import { Passenger } from "./Passenger";
+
+var map = new Map("map");
+
+const driver = new Driver();
+const passenger = new Passenger();
+
+map.AddMarker(driver);
+map.AddMarker(passenger);

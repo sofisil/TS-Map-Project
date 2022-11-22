@@ -5,6 +5,10 @@ export abstract class Person {
     lng: string;
   };
 
+  get getLocation() {
+    return this.location;
+  };
+
   constructor (
     name: string,
     location: {
