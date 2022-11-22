@@ -1,9 +1,9 @@
-export  abstract class Person {
-  private readonly name: string;
-  private readonly location: {
+export abstract class Person {
+  protected name: string;
+  protected location: {
     lat: string;
     lng: string;
-  }
+  };
 
   constructor (
     name: string,
@@ -14,7 +14,7 @@ export  abstract class Person {
     this.name = name;
     this.location = {
       lat: location.lat,
-      lng: location.lng
-    }
+      lng: location.lng,
+    };
   }
 };

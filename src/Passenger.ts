@@ -1,16 +1,11 @@
 import { faker } from '@faker-js/faker';
-export class Passenger {
-  private readonly name: string;
-  private readonly location: {
-    lat: string;
-    lng: string;
-  }
+import { Person } from './Person';
 
+export class Passenger extends Person {
   constructor (){
-    this.name = faker.name.firstName()
-    this.location = {
+    super(faker.name.firstName(), {
       lat: faker.address.latitude(),
       lng: faker.address.longitude()
-    }
+    } );
   }
 };
