@@ -3,3 +3,9 @@ html, body {
   background-color: rgb(28, 29, 54);
   color: rgb(187, 187, 187);
 }
+#map {
+  width: 90%;
+  height: 20rem;
+  border: 1px solid #ccc;
+  margin: 2rem auto;
+}
