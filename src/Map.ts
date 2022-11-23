@@ -1,5 +1,6 @@
 import { Mappable } from "./Mappable";
 import { MapGeoCoder } from './MapGeoCoder';
+import { SearchOptions } from "./SearchOptions";
 export class Map {
   private googleMap: google.maps.Map;
   private geoCoder: MapGeoCoder;
@@ -28,5 +29,9 @@ export class Map {
     });
     this.geoCoder.AddMarkerInfo(marker, mappable);
   }
+
+      SearchText(options: SearchOptions):void {
+        this.geoCoder.SearchText(options);
+      }
 };
 

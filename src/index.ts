@@ -36,3 +36,8 @@ const myhome = new MyHome(passenger);
 map.AddMarker(driver);
 map.AddMarker(passenger);
 map.AddMarker(myhome);
+
+map.SearchText({
+  input: <HTMLInputElement>document.getElementById("address")!,
+  searchButton: <HTMLButtonElement>document.getElementById("searchButton")!
+})
