@@ -3,16 +3,6 @@ html, body {
   background-color: rgb(28, 29, 54);
   color: rgb(187, 187, 187);
 }
-
-#page-title {
-  text-align: center;
-}
-
-.search {
-  text-align: center;
-  margin: 2rem;
-}
-
 #map {
   width: 90%;
   height: 20rem;
