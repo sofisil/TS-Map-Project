@@ -67,6 +67,11 @@ npm install --save @types/google.maps
 ```
 
 ## To install a package, npm uses the following algorithm:
+Normally dependencies in a node project are installed via package.json: https://docs.npmjs.com/files/package.json
+
+You install each dependency with `npm install --save my-dependency` and it will be added to the `package.json `file. So the next person on the project can install all the dependencies with `npm install` command on the same folder of package.json.
+
+
 ```
 npm install
 ```
